@@ -1,0 +1,140 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\ThrombosisApp.Client.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\ThrombosisApp.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\ThrombosisApp.Client.csproj",
+        "projectName": "ThrombosisApp.Client",
+        "projectPath": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\ThrombosisApp.Client.csproj",
+        "packagesPath": "C:\\Users\\maxaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\maxaj\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Shared\\ThrombosisApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Shared\\ThrombosisApp.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[7.0.11, 7.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Shared\\ThrombosisApp.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Shared\\ThrombosisApp.Shared.csproj",
+        "projectName": "ThrombosisApp.Shared",
+        "projectPath": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Shared\\ThrombosisApp.Shared.csproj",
+        "packagesPath": "C:\\Users\\maxaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\maxaj\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

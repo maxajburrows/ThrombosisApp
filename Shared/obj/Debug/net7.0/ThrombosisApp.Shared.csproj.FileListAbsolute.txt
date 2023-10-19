@@ -1,0 +1,11 @@
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Shared\bin\Debug\net7.0\ThrombosisApp.Shared.deps.json
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Shared\bin\Debug\net7.0\ThrombosisApp.Shared.dll
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Shared\bin\Debug\net7.0\ThrombosisApp.Shared.pdb
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Shared\obj\Debug\net7.0\ThrombosisApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Shared\obj\Debug\net7.0\ThrombosisApp.Shared.AssemblyInfoInputs.cache
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Shared\obj\Debug\net7.0\ThrombosisApp.Shared.AssemblyInfo.cs
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Shared\obj\Debug\net7.0\ThrombosisApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Shared\obj\Debug\net7.0\ThrombosisApp.Shared.dll
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Shared\obj\Debug\net7.0\refint\ThrombosisApp.Shared.dll
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Shared\obj\Debug\net7.0\ThrombosisApp.Shared.pdb
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Shared\obj\Debug\net7.0\ref\ThrombosisApp.Shared.dll
