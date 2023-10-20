@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\server\\ThrombosisApp.Server.csproj": {}
+    "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Server\\ThrombosisApp.Server.csproj": {}
   },
   "projects": {
     "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\ThrombosisApp.Client.csproj": {
@@ -83,14 +83,14 @@
         }
       }
     },
-    "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\server\\ThrombosisApp.Server.csproj": {
+    "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Server\\ThrombosisApp.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\server\\ThrombosisApp.Server.csproj",
+        "projectUniqueName": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Server\\ThrombosisApp.Server.csproj",
         "projectName": "ThrombosisApp.Server",
-        "projectPath": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\server\\ThrombosisApp.Server.csproj",
+        "projectPath": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Server\\ThrombosisApp.Server.csproj",
         "packagesPath": "C:\\Users\\maxaj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\server\\obj\\",
+        "outputPath": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maxaj\\AppData\\Roaming\\NuGet\\NuGet.Config"

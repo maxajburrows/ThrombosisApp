@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DQl/eBiXAn7xbg6i1+PnS9G9/OBbH/0vqcOBxsMWwrq2UM93u0TlD9qsydt9pkm8nFVy9Gh17WqVeeAFnF0v6Q==",
+  "dgSpecHash": "EyxT2RWagy+zrU0cuHSPi7BvmItE4A/o23ns3p+OesNKtB8otXsStFLVSndGVmhcHHVrtsPU3M8MI/tE02VlwQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\server\\ThrombosisApp.Server.csproj",
+  "projectFilePath": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Server\\ThrombosisApp.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maxaj\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.11\\microsoft.aspnetcore.authorization.7.0.11.nupkg.sha512",
     "C:\\Users\\maxaj\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.11\\microsoft.aspnetcore.components.7.0.11.nupkg.sha512",
