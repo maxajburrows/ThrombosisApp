@@ -1,9 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace ThrombosisApp.Server.Controllers;
+namespace ThrombosisApp.Server.Models;
 
 public class Patient
 {
+     [Key]
     public int PatientId { get; set; }
      [Required]
      [StringLength(60)]

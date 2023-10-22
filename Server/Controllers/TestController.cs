@@ -6,9 +6,9 @@ namespace ThrombosisApp.Server.Controllers;
 [Route("[controller]")]
 public class TestController
 {
-    // host/controllername
+    // host/Patients
     [HttpGet]
-    public string TestGet()
+    public string GetAllPatients()
     {
         return "Hit the first endpoint";
     }
@@ -19,7 +19,7 @@ public class TestController
         return "Hit the second endpoint";
     }
     // host/controllername/[id]
-    [HttpGet("{id:int}")]
+    [HttpDelete("{id:int}")]
     public string TestWithAddedRouting(int id)
     {
         return $"Hit the third endpoint with numnber {id}";

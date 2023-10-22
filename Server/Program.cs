@@ -1,5 +1,9 @@
 using Microsoft.AspNetCore.ResponseCompression;
-using ThrombosisApp.Server.Controllers;
+using Microsoft.EntityFrameworkCore;
+using ThrombosisApp.Server.Models;
+using ThrombosisApp.Server.Data;
+using ThrombosisApp.Server.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+string datbasePath = Path.Combine(Environment.CurrentDirectory, "PatientDB.db");
+Console.WriteLine(datbasePath);
+builder.Services.AddDbContext<PatientDB>(options =>
+    options.UseSqlite($"Data Source={datbasePath}"));
+builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 
 var app = builder.Build();
 
@@ -34,7 +43,10 @@ app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
 
-using (PatientDB p = new())
+var optionsBuilder = new DbContextOptionsBuilder<PatientDB>();
+optionsBuilder.UseSqlite();
+
+using (PatientDB p = new PatientDB(optionsBuilder.Options))
 {
     bool deleted = await p.Database.EnsureDeletedAsync();
     Console.WriteLine($"Database deleted: {deleted}");
