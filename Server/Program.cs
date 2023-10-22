@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using ThrombosisApp.Server.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,5 +33,19 @@ app.UseRouting();
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+
+using (PatientDB p = new())
+{
+    bool deleted = await p.Database.EnsureDeletedAsync();
+    Console.WriteLine($"Database deleted: {deleted}");
+    bool created = await p.Database.EnsureCreatedAsync();
+    Console.WriteLine($"Database created: {created}");
+
+    foreach (Patient pat in p.Patients)
+    {
+        Console.WriteLine("{0} {1} has INR value of: {2}",
+            pat.FirstName, pat.LastName, pat.INR);
+    }
+}
 
 app.Run();

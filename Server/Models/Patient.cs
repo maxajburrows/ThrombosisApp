@@ -11,5 +11,7 @@ public class Patient
      [Required]
      [StringLength(60)]
     public string? LastName { get; set; }
+     [Required]
+    public float INR { get; set; }
     public string? DoseDescription { get; set; }
 }
