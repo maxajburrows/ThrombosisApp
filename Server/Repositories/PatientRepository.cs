@@ -16,6 +16,18 @@ public class PatientRepository : IPatientRepository
     {   
         return await _context.Patients.ToListAsync();
     }
+    public Task<Patient?> CreateAsync(Patient newPatient)
+    {
+        throw new NotImplementedException();
+    }
+
+    public async Task<Patient?> UpdateAsync(Patient updatedPatient)
+    {
+        _context.Patients.Update(updatedPatient);
+        int affected = await _context.SaveChangesAsync();
+        Patient? editedPatient = _context.Patients.Find(updatedPatient.PatientId);
+        return editedPatient;
+    }
 
     public async Task<bool?> DeleteAsync(int patientId)
     {  
@@ -27,4 +39,6 @@ public class PatientRepository : IPatientRepository
         int affected = await _context.SaveChangesAsync();
         return affected == 1;
     }
+
+    
 }

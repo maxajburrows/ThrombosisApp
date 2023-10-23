@@ -23,7 +23,6 @@ public class PatientsController : ControllerBase
         return await _patientRepository.RetrieveAllAsync();
     }
 
-
     // host/controllername/routed
     [HttpDelete("{patientId}")]
     public async Task<bool?> DeletePatient(int patientId)
@@ -31,9 +30,9 @@ public class PatientsController : ControllerBase
         return await _patientRepository.DeleteAsync(patientId);
     }
     // host/controllername/[id]
-    [HttpGet("{id:int}")]
-    public string TestWithAddedRouting(int id)
+    [HttpPatch("{patientId}")]
+    public async Task<Patient?> updatedPatient(int patientId, [FromBody] Patient updatedPatient)
     {
-        return $"Hit the third endpoint with numnber {id}";
+        return await _patientRepository.UpdateAsync(updatedPatient);
     }
 }
