@@ -31,8 +31,14 @@ public class PatientsController : ControllerBase
     }
     // host/controllername/[id]
     [HttpPatch("{patientId}")]
-    public async Task<Patient?> updatedPatient(int patientId, [FromBody] Patient updatedPatient)
+    public async Task<Patient?> UpdatePatient(int patientId, [FromBody] Patient updatedPatient)
     {
         return await _patientRepository.UpdateAsync(updatedPatient);
+    }
+
+    [HttpPost]
+    public async Task<Patient?> AddPatient([FromBody] Patient newPatient)
+    {
+        return await _patientRepository.CreateAsync(newPatient);
     }
 }

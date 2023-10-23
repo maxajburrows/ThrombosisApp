@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using ThrombosisApp.Server.Models;
 using ThrombosisApp.Server.Data;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace ThrombosisApp.Server.Repositories;
 
@@ -16,15 +17,17 @@ public class PatientRepository : IPatientRepository
     {   
         return await _context.Patients.ToListAsync();
     }
-    public Task<Patient?> CreateAsync(Patient newPatient)
+    public async Task<Patient?> CreateAsync(Patient newPatient)
     {
-        throw new NotImplementedException();
+        EntityEntry<Patient> added = await _context.Patients.AddAsync(newPatient);
+        await _context.SaveChangesAsync();
+        return added.Entity;
     }
 
     public async Task<Patient?> UpdateAsync(Patient updatedPatient)
     {
         _context.Patients.Update(updatedPatient);
-        int affected = await _context.SaveChangesAsync();
+        await _context.SaveChangesAsync();
         Patient? editedPatient = _context.Patients.Find(updatedPatient.PatientId);
         return editedPatient;
     }
@@ -39,6 +42,4 @@ public class PatientRepository : IPatientRepository
         int affected = await _context.SaveChangesAsync();
         return affected == 1;
     }
-
-    
 }
