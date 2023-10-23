@@ -199,14 +199,14 @@
       "netstandard.dll": "sha256-Cr6slBs\/R2v2t\/vecFDHbQHakbEhar0adYu0YemwiXI=",
       "System.Private.CoreLib.dll": "sha256-dDw5nzGJhW1jOjGfSJcs\/Mi4KQ+DZygXnoK+vJ+jHyk=",
       "ThrombosisApp.Shared.dll": "sha256-3kJC0im4B0BnnAOaLJTAuL36JUACMR2xHvv0uvSFiUY=",
-      "ThrombosisApp.Client.dll": "sha256-FtroWIBE+6sSRNX42OtB1EquGodzCO2gKS6aFJ0Fd6A="
+      "ThrombosisApp.Client.dll": "sha256-D2\/EG6VN69WXhyhjTAZ6uerifMmmMOa4DRr3Bb4zhwc="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "ThrombosisApp.Shared.pdb": "sha256-o2D48K1E74gPT8P0sp7cZHYb5\/sWbX\/7iXl9igOZtYE=",
-      "ThrombosisApp.Client.pdb": "sha256-0A90XU9KC6\/hFCXl9SxjCXBkxqkeXFZzVzesI\/yR1Cc="
+      "ThrombosisApp.Client.pdb": "sha256-nJAOXjLJnDOW0PoJ2NFf48FQOGNfk8jtQpELjQ4qraY="
     },
     "runtime": {
       "dotnet.7.0.11.atwhp8vsdh.js": "sha256-RtIVigdAD1mUvR4pxoKyD8kcQgw4INP81v+PVSqkeQY=",
