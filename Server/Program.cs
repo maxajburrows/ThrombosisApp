@@ -16,6 +16,8 @@ Console.WriteLine(datbasePath);
 builder.Services.AddDbContext<PatientDB>(options =>
     options.UseSqlite($"Data Source={datbasePath}"));
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
+// builder.Services.AddRouting(options => 
+//     options.ConstraintMap.Add("string", typeof(string)));
 
 var app = builder.Build();
 

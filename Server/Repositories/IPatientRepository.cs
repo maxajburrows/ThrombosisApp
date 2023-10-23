@@ -6,5 +6,5 @@ public interface IPatientRepository
 {
     // Task<Patient?>
     Task<IEnumerable<Patient>> RetrieveAllAsync();
-    Task<bool?> DeleteAsync(string patientId)
+    Task<bool?> DeleteAsync(int patientId);
 }

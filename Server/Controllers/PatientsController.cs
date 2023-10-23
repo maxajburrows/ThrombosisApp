@@ -25,10 +25,10 @@ public class PatientsController : ControllerBase
 
 
     // host/controllername/routed
-    [HttpGet("routed")]
-    public string TestWithAddedRouting()
+    [HttpDelete("{patientId}")]
+    public async Task<bool?> DeletePatient(int patientId)
     {
-        return "Hit the second endpoint";
+        return await _patientRepository.DeleteAsync(patientId);
     }
     // host/controllername/[id]
     [HttpGet("{id:int}")]

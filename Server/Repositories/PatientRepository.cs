@@ -17,7 +17,7 @@ public class PatientRepository : IPatientRepository
         return await _context.Patients.ToListAsync();
     }
 
-    public async Task<bool?> DeleteAsync(string patientId)
+    public async Task<bool?> DeleteAsync(int patientId)
     {  
         Patient? patient = _context.Patients.Find(patientId);
 
