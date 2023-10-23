@@ -1,0 +1,46 @@
+﻿@page "/patients"
+@using ThrombosisApp.Shared.Dto;
+@inject HttpClient Http
+
+<PageTitle>Patient List</PageTitle>
+
+<h1>Patient List</h1>
+
+<p>These are our lovely patients</p>
+
+@if (patients == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>INR</th>
+                <th>More Info</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var patient in patients)
+            {
+                <tr>
+                    <td>@patient.FirstName</td>
+                    <td>@patient.LastName</td>
+                    <td>@patient.INR</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private PatientResponseDto[]? patients;
+
+    protected override async Task OnInitializedAsync()
+    {
+        patients = await Http.GetFromJsonAsync<PatientResponseDto[]>("Patients");
+    }
+}

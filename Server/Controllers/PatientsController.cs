@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using ThrombosisApp.Server.Repositories;
 using ThrombosisApp.Server.Models;
+using ThrombosisApp.Server.Services;
+using ThrombosisApp.Shared.Dto;
+
 
 
 namespace ThrombosisApp.Server.Controllers;
@@ -18,9 +21,10 @@ public class PatientsController : ControllerBase
     // host/controllername
     [HttpGet]
     [ProducesResponseType(200, Type = typeof(IEnumerable<Patient>))]
-    public async Task<ActionResult<IEnumerable<Patient>>> GetAllPatients()
+    public async Task<ActionResult<IEnumerable<PatientResponseDto>>> GetAllPatients()
     {
-        return Ok(await _patientRepository.RetrieveAllAsync());
+        IEnumerable<Patient> patientEntities = await _patientRepository.RetrieveAllAsync();
+        return Ok(patientEntities.Select(Converters.ToPatientResponseDto));
     }
 
     // host/controllername/routed

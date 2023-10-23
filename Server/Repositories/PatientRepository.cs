@@ -15,6 +15,7 @@ public class PatientRepository : IPatientRepository
 
     public async Task<IEnumerable<Patient>> RetrieveAllAsync()
     {   
+        IEnumerable<Patient> patientList = await _context.Patients.ToListAsync();
         return await _context.Patients.ToListAsync();
     }
     public async Task<Patient?> CreateAsync(Patient newPatient)
