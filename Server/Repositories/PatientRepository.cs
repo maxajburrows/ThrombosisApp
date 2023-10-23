@@ -16,4 +16,15 @@ public class PatientRepository : IPatientRepository
     {   
         return await _context.Patients.ToListAsync();
     }
+
+    public async Task<bool?> DeleteAsync(string patientId)
+    {  
+        Patient? patient = _context.Patients.Find(patientId);
+
+        if (patient is null) return false;
+        _context.Patients.Remove(patient);
+
+        int affected = await _context.SaveChangesAsync();
+        return affected == 1;
+    }
 }
