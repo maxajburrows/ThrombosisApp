@@ -15,7 +15,7 @@ string datbasePath = Path.Combine(Environment.CurrentDirectory, "PatientDB.db");
 Console.WriteLine(datbasePath);
 builder.Services.AddDbContext<PatientDB>(options =>
     options.UseSqlite($"Data Source={datbasePath}"));
-builder.Services.AddScoped<IPatientRepository, PatientRepository>();
+builder.Services.AddScoped<IPatientRepository, PatientRepository>(); //AddSingleton
 // builder.Services.AddRouting(options => 
 //     options.ConstraintMap.Add("string", typeof(string)));
 

@@ -3,7 +3,7 @@ using ThrombosisApp.Server.Models;
 
 namespace ThrombosisApp.Server.Data;
 
-public class PatientDB : DbContext
+public class PatientDB : DbContext //Db
 {
     public PatientDB(DbContextOptions<PatientDB> options) : base(options)
     {

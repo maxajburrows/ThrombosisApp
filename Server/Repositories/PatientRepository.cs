@@ -26,10 +26,9 @@ public class PatientRepository : IPatientRepository
 
     public async Task<Patient?> UpdateAsync(Patient updatedPatient)
     {
-        _context.Patients.Update(updatedPatient);
+        EntityEntry<Patient> updated = _context.Patients.Update(updatedPatient);
         await _context.SaveChangesAsync();
-        Patient? editedPatient = _context.Patients.Find(updatedPatient.PatientId);
-        return editedPatient;
+        return updated.Entity;
     }
 
     public async Task<bool?> DeleteAsync(int patientId)

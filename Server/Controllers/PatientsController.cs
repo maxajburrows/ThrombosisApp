@@ -18,27 +18,29 @@ public class PatientsController : ControllerBase
     // host/controllername
     [HttpGet]
     [ProducesResponseType(200, Type = typeof(IEnumerable<Patient>))]
-    public async Task<IEnumerable<Patient>> GetAllPatients()
+    public async Task<ActionResult<IEnumerable<Patient>>> GetAllPatients()
     {
-        return await _patientRepository.RetrieveAllAsync();
+        return Ok(await _patientRepository.RetrieveAllAsync());
     }
 
     // host/controllername/routed
     [HttpDelete("{patientId}")]
-    public async Task<bool?> DeletePatient(int patientId)
+    public async Task<ActionResult<bool?>> DeletePatient(int patientId)
     {
-        return await _patientRepository.DeleteAsync(patientId);
+        await _patientRepository.DeleteAsync(patientId);
+        return NoContent();
+        //Deal with failure
     }
     // host/controllername/[id]
     [HttpPatch("{patientId}")]
-    public async Task<Patient?> UpdatePatient(int patientId, [FromBody] Patient updatedPatient)
+    public async Task<ActionResult<Patient>> UpdatePatient(int patientId, [FromBody] Patient updatedPatient)
     {
-        return await _patientRepository.UpdateAsync(updatedPatient);
+        return Ok(await _patientRepository.UpdateAsync(updatedPatient));
     }
 
     [HttpPost]
-    public async Task<Patient?> AddPatient([FromBody] Patient newPatient)
+    public async Task<ActionResult<Patient?>> AddPatient([FromBody] Patient newPatient)
     {
-        return await _patientRepository.CreateAsync(newPatient);
+        return Created("You can't access this resource yet", await _patientRepository.CreateAsync(newPatient));
     }
 }
