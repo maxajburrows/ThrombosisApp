@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using ThrombosisApp.Server.Models;
 using ThrombosisApp.Server.Data;
+using ThrombosisApp.Server.Services;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using ThrombosisApp.Shared.Dto;
 
 namespace ThrombosisApp.Server.Repositories;
 
@@ -18,9 +20,9 @@ public class PatientRepository : IPatientRepository
         IEnumerable<Patient> patientList = await _context.Patients.ToListAsync();
         return await _context.Patients.ToListAsync();
     }
-    public async Task<Patient?> CreateAsync(Patient newPatient)
+    public async Task<Patient?> CreateAsync(NewPatientDto newPatient)
     {
-        EntityEntry<Patient> added = await _context.Patients.AddAsync(newPatient);
+        EntityEntry<Patient> added = await _context.Patients.AddAsync(Converters.NewPatientDtoToPatient(newPatient));
         await _context.SaveChangesAsync();
         return added.Entity;
     }

@@ -41,7 +41,7 @@ public class PatientsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<Patient?>> AddPatient([FromBody] Patient newPatient)
+    public async Task<ActionResult<Patient?>> AddPatient([FromBody] NewPatientDto newPatient)
     {
         return Created("You can't access this resource yet", await _patientRepository.CreateAsync(newPatient));
     }

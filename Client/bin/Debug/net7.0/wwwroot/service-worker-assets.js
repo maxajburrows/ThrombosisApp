@@ -69,7 +69,7 @@
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-NNbYPYZHYJm+BNVmhW0TgP\/ox2zaM2RY0+M2XeCwQvc=",
+      "hash": "sha256-XAuPXXJH06cHL9BiztIhcCxhelSjk4arhctci87s\/UU=",
       "url": "ThrombosisApp.Client.styles.css"
     },
     {
@@ -865,19 +865,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-3kJC0im4B0BnnAOaLJTAuL36JUACMR2xHvv0uvSFiUY=",
+      "hash": "sha256-TqMr+OZhB\/g8vimY8jn2173gwU2HqjYQBTwgi8Dbmkg=",
       "url": "_framework\/ThrombosisApp.Shared.dll"
     },
     {
-      "hash": "sha256-o2D48K1E74gPT8P0sp7cZHYb5\/sWbX\/7iXl9igOZtYE=",
+      "hash": "sha256-bXyn3EG2gTsLMAUMwkt\/jmSQ2f3qbb9SLcZcN1b+XhU=",
       "url": "_framework\/ThrombosisApp.Shared.pdb"
     },
     {
-      "hash": "sha256-ecf2D42QNfkt7d33c+jlm4IAv1P+KqPpBL5ivNsxgXA=",
+      "hash": "sha256-kOH0GmnhKqiiPrd+s0BZ+N+8XeY8p9OpSjYCoh6IuJ0=",
       "url": "_framework\/ThrombosisApp.Client.dll"
     },
     {
-      "hash": "sha256-3RFoVa8yv09FmBIFesZYqKU56vuUW33vOmKgFlR41IQ=",
+      "hash": "sha256-oiup7tDDgnUfm2tzRUO6UZg3LIp27RmKh5rm\/8JIHYQ=",
       "url": "_framework\/ThrombosisApp.Client.pdb"
     },
     {
@@ -885,9 +885,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-e7Dy6BPlqfuI++Ua8augkgIopxy3GHibvsaheMeoiP0=",
+      "hash": "sha256-g0kJQ\/dUYj3lP8cwZVWPPk7vpdbQCBytcUS\/Kq3BF+k=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "kCf24qs8"
+  "version": "zM7VYFnw"
 };

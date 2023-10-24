@@ -5,10 +5,11 @@
 .top-row[b-r5rcf67f9a] {
     height: 3.5rem;
     background-color: rgba(0,0,0,0.4);
+    padding-right: 1rem;
 }
 
 .navbar-brand[b-r5rcf67f9a] {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .oi[b-r5rcf67f9a] {

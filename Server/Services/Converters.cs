@@ -15,4 +15,13 @@ public class Converters
             DoseDescription = patient.DoseDescription
         };
     }
+    public static Patient NewPatientDtoToPatient(NewPatientDto newPatient)
+    {
+        return new() {
+            PatientId = 0,
+            FirstName = newPatient.FirstName,
+            LastName = newPatient.LastName,
+            INR = newPatient.INR
+        };
+    }
 }

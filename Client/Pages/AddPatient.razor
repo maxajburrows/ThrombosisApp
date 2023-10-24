@@ -1,0 +1,46 @@
+﻿@page "/addPatient"
+@using ThrombosisApp.Shared.Dto;
+@using System.Text.Json;
+@inject HttpClient Http;
+
+<PageTitle>Add a Patient</PageTitle>
+
+<h1>Add a Patient</h1>
+
+<p>Add a patient with the form below</p>
+
+<EditForm Model="@newPatient" OnValidSubmit="@SumbitNewPatient">
+<DataAnnotationsValidator/>
+<ValidationSummary/>
+
+<p>
+    <label for="firstName">First Name</label>
+    <InputText id="firstName" @bind-Value="newPatient.FirstName" />
+</p>
+<p>
+    <label for="lastName">Last Name</label>
+    <InputText id="lastName" @bind-Value="newPatient.LastName" />
+</p>
+<p>
+    <label for="inr">INR</label>
+    <InputNumber id="inr" @bind-Value="newPatient.INR" />
+</p>
+
+<button type="submit">Submit</button>
+
+</EditForm>
+
+<div>
+    <span id="resultJson"></span>
+</div>
+
+@code {
+    private NewPatientDto newPatient = new();
+    private HttpResponseMessage addedPatient;
+    private async Task SumbitNewPatient()
+    {
+        @* await JsRuntime.InvokeVoidAsync("setElementTextById", "resultJson",
+            JsonSerializer.Serialize(newPatient)); *@
+        HttpResponseMessage addedPatient = await Http.PostAsJsonAsync<NewPatientDto>("https://localhost:5007/Patients", newPatient);
+    }
+}
