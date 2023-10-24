@@ -16,8 +16,16 @@ Console.WriteLine(datbasePath);
 builder.Services.AddDbContext<PatientDB>(options =>
     options.UseSqlite($"Data Source={datbasePath}"));
 builder.Services.AddScoped<IPatientRepository, PatientRepository>(); //AddSingleton
-// builder.Services.AddRouting(options => 
-//     options.ConstraintMap.Add("string", typeof(string)));
+
+builder.Services.AddCors(options =>
+    {
+        options.AddDefaultPolicy(builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+    });
 
 var app = builder.Build();
 
@@ -33,17 +41,20 @@ else
     app.UseHsts();
 }
 
+app.UseCors();
+
 app.UseHttpsRedirection();
 
 app.UseBlazorFrameworkFiles();
-app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseStaticFiles();
+app.UseBlazorFrameworkFiles();
 
-app.MapRazorPages();
+//app.MapRazorPages();
 app.MapControllers();
-app.MapFallbackToFile("index.html");
+//app.MapFallbackToFile("index.html");
 
 var optionsBuilder = new DbContextOptionsBuilder<PatientDB>();
 optionsBuilder.UseSqlite();

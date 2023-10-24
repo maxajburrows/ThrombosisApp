@@ -5,8 +5,6 @@ using ThrombosisApp.Server.Models;
 using ThrombosisApp.Server.Services;
 using ThrombosisApp.Shared.Dto;
 
-
-
 namespace ThrombosisApp.Server.Controllers;
 
 [ApiController]

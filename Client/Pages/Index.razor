@@ -1,4 +1,7 @@
 ﻿@page "/"
+@inject HttpClient Http
+
+
 
 <PageTitle>Index</PageTitle>
 
@@ -14,3 +17,13 @@
 
 
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+@code {
+    private string? testMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        testMessage = await Http.GetStringAsync("Test");
+    }
+}
+

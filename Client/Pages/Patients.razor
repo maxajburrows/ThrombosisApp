@@ -41,6 +41,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        patients = await Http.GetFromJsonAsync<PatientResponseDto[]>("Patients");
+        patients = await Http.GetFromJsonAsync<PatientResponseDto[]>("https://localhost:5007/Patients");
     }
 }
