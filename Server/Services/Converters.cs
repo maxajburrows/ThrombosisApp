@@ -1,6 +1,8 @@
 using ThrombosisApp.Shared.Dto;
 using ThrombosisApp.Server.Models;
 
+
+
 namespace ThrombosisApp.Server.Services;
 
 public class Converters
@@ -12,7 +14,7 @@ public class Converters
             FirstName = patient.FirstName,
             LastName = patient.LastName,
             INR = patient.INR,
-            DoseDescription = patient.DoseDescription
+            DoseDescriptions = Converters.ToDoseDescriptionDto(patient.DoseDescriptions)
         };
     }
     public static Patient NewPatientDtoToPatient(NewPatientDto newPatient)
@@ -21,7 +23,18 @@ public class Converters
             PatientId = 0,
             FirstName = newPatient.FirstName,
             LastName = newPatient.LastName,
-            INR = newPatient.INR
+            INR = newPatient.INR,
+            //DoseDescription = PatientsService.CalculateDose(newPatient.INR)
         };
+    }
+    public static List<DoseDescriptionDto> ToDoseDescriptionDto(List<DoseDescription> doses)
+    {
+        List<DoseDescriptionDto> dtos = new();
+        foreach (DoseDescription dose in doses)
+        {
+            DoseDescriptionDto dto = new() { Id = dose.Id, PatientId = dose.PatientId, Day = dose.Day, Dose = dose.Dose};
+            dtos.Add(dto);
+        }
+        return dtos;
     }
 }

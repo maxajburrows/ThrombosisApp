@@ -22,9 +22,9 @@ public class PatientsController : ControllerBase
     // host/controllername
     [HttpGet]
     [ProducesResponseType(200, Type = typeof(IEnumerable<Patient>))]
-    public async Task<ActionResult<IEnumerable<PatientResponseDto>>> GetAllPatients()
+    public async Task<ActionResult<List<PatientResponseDto>>> GetAllPatients()
     {
-        IEnumerable<Patient> patientEntities = await _patientRepository.RetrieveAllAsync();
+        List<Patient> patientEntities = await _patientRepository.RetrieveAllAsync();
         return Ok(patientEntities.Select(Converters.ToPatientResponseDto));
     }
 

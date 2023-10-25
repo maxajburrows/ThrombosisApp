@@ -8,7 +8,7 @@ public interface IPatientRepository
     // Task<Patient?>
     Task<(Patient?, bool)> CreateAsync(NewPatientDto newPatient);
     Task<(Patient?, bool)> UpdateAsync(Patient updatedPatient);
-    Task<IEnumerable<Patient>> RetrieveAllAsync();
+    Task<List<Patient>> RetrieveAllAsync();
     Task<bool> DeleteAsync(int patientId);
     Patient? FindPatient(int patientId);
 }

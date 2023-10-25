@@ -22,4 +22,15 @@ public class PatientsService
 
         return (await _patientRepository.UpdateAsync(originalPatient)).Item1;
     }
+    public static float[] CalculateDose(float INR)
+    {
+        float[] doseDescription = new float[30];
+        float dose = Math.Max(2+(3-INR)*3, 0);
+        for (int i = 0; i < 30; i++)
+        {
+            doseDescription[i] = dose;
+            dose *= 0.95f;
+        }
+        return doseDescription;
+    }
 }

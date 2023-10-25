@@ -16,10 +16,9 @@ public class PatientRepository : IPatientRepository
         _context = context;
     }
 
-    public async Task<IEnumerable<Patient>> RetrieveAllAsync()
+    public async Task<List<Patient>> RetrieveAllAsync()
     {   
-        IEnumerable<Patient> patientList = await _context.Patients.ToListAsync();
-        return await _context.Patients.ToListAsync();
+        return await _context.Patients.Include(p => p.DoseDescriptions).ToListAsync();
     }
     public async Task<(Patient?, bool)> CreateAsync(NewPatientDto newPatient)
     {

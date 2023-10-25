@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ThrombosisApp.Server.Models;
 
 public class Patient
-{
+{     
      [Key]
      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int PatientId { get; set; }
@@ -16,5 +16,6 @@ public class Patient
     public string? LastName { get; set; }
      [Required]
     public float INR { get; set; }
-    public string? DoseDescription { get; set; }
+    public List<DoseDescription>? DoseDescriptions { get; set; }
+    
 }

@@ -88,3 +88,5 @@ C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Server\bin\Debug\net7.0\Humanizer.
 C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Server\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Server\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Server\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Server\bin\Debug\net7.0\Castle.Core.dll
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Server\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Proxies.dll
