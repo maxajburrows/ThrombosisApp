@@ -39,8 +39,6 @@
     private HttpResponseMessage addedPatient;
     private async Task SumbitNewPatient()
     {
-        @* await JsRuntime.InvokeVoidAsync("setElementTextById", "resultJson",
-            JsonSerializer.Serialize(newPatient)); *@
         HttpResponseMessage addedPatient = await Http.PostAsJsonAsync<NewPatientDto>("https://localhost:5007/Patients", newPatient);
     }
 }

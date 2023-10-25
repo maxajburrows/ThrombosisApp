@@ -1,6 +1,7 @@
 ﻿@page "/patients"
 @using ThrombosisApp.Shared.Dto;
-@inject HttpClient Http
+@using Microsoft.AspNetCore.Components.Web
+@inject HttpClient Http;
 
 <PageTitle>Patient List</PageTitle>
 
@@ -30,6 +31,11 @@ else
                     <td>@patient.FirstName</td>
                     <td>@patient.LastName</td>
                     <td>@patient.INR</td>
+                    <td>
+                        <button>Details</button>
+                        <button>Edit</button>
+                        <button @onclick="() => DeletePatient(patient.PatientId)">Delete</button>
+                    </td>
                 </tr>
             }
         </tbody>
@@ -41,6 +47,11 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+        patients = await Http.GetFromJsonAsync<PatientResponseDto[]>("https://localhost:5007/Patients");
+    }
+    private async Task DeletePatient(int patientId)
+    {
+        await Http.DeleteAsync($"https://localhost:5007/Patients/{patientId}");
         patients = await Http.GetFromJsonAsync<PatientResponseDto[]>("https://localhost:5007/Patients");
     }
 }
