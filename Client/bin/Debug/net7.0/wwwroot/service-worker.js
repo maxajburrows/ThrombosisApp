@@ -1,2 +1,2 @@
 self.addEventListener('fetch', () => { });
-/* Manifest version: Inox/qWJ */
+/* Manifest version: x+vqIQwe */

@@ -1,34 +1,35 @@
-﻿@* @page "/details/{PatientId:int}"
+﻿@page "/details/{PatientId:int}"
 @using ThrombosisApp.Shared.Dto;
 @using Microsoft.AspNetCore.Components.Web
 @inject HttpClient Http;
 
 <PageTitle>Patient Details</PageTitle>
 
-<h1>Patient Details</h1>
 
-<p>More patient details</p>
 
-@if (patients == null)
+@if (patient == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
+    <h1>Additional details for @patient.FirstName @patient.LastName</h1>
+    <h3>Current INR Value: @patient.INR</h3>
+    <h4>Detailed dosing information for the next 30 days</h4>
+
     <table class="table">
         <thead>
             <tr>
                 <th>Day</th>
-                <th>Dose</th>
+                <th>Dose (mg/day)</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var patient in patients)
+            @foreach (var dose in patient.DoseDescriptions)
             {
                 <tr>
-                    <td>@patient.FirstName @patient.LastName</td>
-                    <td>
-                    </td>
+                    <td>@dose.Day</td>
+                    <td>@dose.Dose</td>
                 </tr>
             }
         </tbody>
@@ -36,10 +37,11 @@ else
 }
 
 @code {
-    private DoseDescriptionDto[]? doses;
-
-    protected override void OnInitialized()
+    [Parameter]
+    public int PatientId { get; set; }
+    private PatientResponseDto? patient;
+    protected override async Task OnInitializedAsync()
     {
-        PatientResponseDto patient = Patients.patients
+        patient = await Http.GetFromJsonAsync<PatientResponseDto>($"https://localhost:5007/Patients/{PatientId}");
     }
-} *@
+}
