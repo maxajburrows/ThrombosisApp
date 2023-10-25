@@ -4,6 +4,7 @@ using ThrombosisApp.Server.Data;
 using ThrombosisApp.Server.Services;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using ThrombosisApp.Shared.Dto;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace ThrombosisApp.Server.Repositories;
 
@@ -20,21 +21,21 @@ public class PatientRepository : IPatientRepository
         IEnumerable<Patient> patientList = await _context.Patients.ToListAsync();
         return await _context.Patients.ToListAsync();
     }
-    public async Task<Patient?> CreateAsync(NewPatientDto newPatient)
+    public async Task<(Patient?, bool)> CreateAsync(NewPatientDto newPatient)
     {
         EntityEntry<Patient> added = await _context.Patients.AddAsync(Converters.NewPatientDtoToPatient(newPatient));
-        await _context.SaveChangesAsync();
-        return added.Entity;
+        int affected = await _context.SaveChangesAsync();
+        return (added.Entity, affected == 1);
     }
 
-    public async Task<Patient?> UpdateAsync(Patient updatedPatient)
+    public async Task<(Patient?, bool)> UpdateAsync(Patient updatedPatient)
     {
         EntityEntry<Patient> updated = _context.Patients.Update(updatedPatient);
-        await _context.SaveChangesAsync();
-        return updated.Entity;
+        int affected = await _context.SaveChangesAsync();
+        return (updated.Entity, affected == 1);
     }
 
-    public async Task<bool?> DeleteAsync(int patientId)
+    public async Task<bool> DeleteAsync(int patientId)
     {  
         Patient? patient = _context.Patients.Find(patientId);
 
@@ -43,5 +44,10 @@ public class PatientRepository : IPatientRepository
 
         int affected = await _context.SaveChangesAsync();
         return affected == 1;
+    }
+
+    public Patient? FindPatient(int patientId)
+    {
+        return _context.Patients.Find(patientId);
     }
 }

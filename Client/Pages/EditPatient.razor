@@ -1,0 +1,51 @@
+﻿@page "/editPatient/{PatientId:int}"
+@using ThrombosisApp.Shared.Dto;
+@using System.Text.Json;
+@inject HttpClient Http;
+
+<PageTitle>Add a Patient</PageTitle>
+
+<h1>Add a Patient</h1>
+
+<p>Add a patient with the form below</p>
+
+<EditForm Model="@editPatient" OnValidSubmit="@SumbitPatientEdits">
+<DataAnnotationsValidator/>
+<ValidationSummary/>
+
+<p>
+    <label for="firstName">First Name</label>
+    <InputText id="firstName" @bind-Value="editPatient.FirstName" />
+</p>
+<p>
+    <label for="lastName">Last Name</label>
+    <InputText id="lastName" @bind-Value="editPatient.LastName" />
+</p>
+<p>
+    <label for="inr">INR</label>
+    <InputNumber id="inr" @bind-Value="editPatient.INR" />
+</p>
+
+<button type="submit">Submit</button>
+
+</EditForm>
+
+<div>
+    <span id="resultJson"></span>
+</div>
+
+@code {
+    [Parameter]
+    public int PatientId { get; set; }
+    private EditPatientDto editPatient;
+    protected override void OnInitialized()
+    {
+        editPatient = new() { PatientId = PatientId };
+    }
+
+    private HttpResponseMessage editedPatient;
+    private async Task SumbitPatientEdits()
+    {
+        HttpResponseMessage editedPatient = await Http.PatchAsJsonAsync<EditPatientDto>($"https://localhost:5007/Patients/{PatientId}", editPatient);
+    }
+}

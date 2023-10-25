@@ -12,9 +12,12 @@ namespace ThrombosisApp.Server.Controllers;
 public class PatientsController : ControllerBase
 {
     private readonly IPatientRepository _patientRepository;
-    public PatientsController(IPatientRepository patientRepository)
+    private readonly PatientsService _patientsService;
+
+    public PatientsController(IPatientRepository patientRepository, PatientsService patientsService)
     {
         _patientRepository = patientRepository;
+        _patientsService = patientsService;
     }
     // host/controllername
     [HttpGet]
@@ -35,14 +38,14 @@ public class PatientsController : ControllerBase
     }
     // host/controllername/[id]
     [HttpPatch("{patientId}")]
-    public async Task<ActionResult<Patient>> UpdatePatient(int patientId, [FromBody] Patient updatedPatient)
+    public async Task<ActionResult<Patient>> UpdatePatient(int patientId, [FromBody] EditPatientDto updatedPatient)
     {
-        return Ok(await _patientRepository.UpdateAsync(updatedPatient));
+        return Ok(await _patientsService.UpdatePatient(updatedPatient));
     }
 
     [HttpPost]
-    public async Task<ActionResult<Patient?>> AddPatient([FromBody] NewPatientDto newPatient)
+    public async Task<ActionResult<PatientResponseDto?>> AddPatient([FromBody] NewPatientDto newPatient)
     {
-        return Created("You can't access this resource yet", await _patientRepository.CreateAsync(newPatient));
+        return Created("You can't access this resource yet", Converters.ToPatientResponseDto((await _patientRepository.CreateAsync(newPatient)).Item1));
     }
 }

@@ -6,8 +6,9 @@ namespace ThrombosisApp.Server.Repositories;
 public interface IPatientRepository
 {
     // Task<Patient?>
-    Task<Patient?> CreateAsync(NewPatientDto newPatient);
-    Task<Patient?> UpdateAsync(Patient updatedPatient);
+    Task<(Patient?, bool)> CreateAsync(NewPatientDto newPatient);
+    Task<(Patient?, bool)> UpdateAsync(Patient updatedPatient);
     Task<IEnumerable<Patient>> RetrieveAllAsync();
-    Task<bool?> DeleteAsync(int patientId);
+    Task<bool> DeleteAsync(int patientId);
+    Patient? FindPatient(int patientId);
 }

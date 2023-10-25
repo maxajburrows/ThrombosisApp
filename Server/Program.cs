@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using ThrombosisApp.Server.Models;
 using ThrombosisApp.Server.Data;
 using ThrombosisApp.Server.Repositories;
+using ThrombosisApp.Server.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,7 @@ Console.WriteLine(datbasePath);
 builder.Services.AddDbContext<PatientDB>(options =>
     options.UseSqlite($"Data Source={datbasePath}"));
 builder.Services.AddScoped<IPatientRepository, PatientRepository>(); //AddSingleton
+builder.Services.AddScoped<PatientsService>();
 
 builder.Services.AddCors(options =>
     {

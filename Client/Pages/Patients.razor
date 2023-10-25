@@ -2,6 +2,7 @@
 @using ThrombosisApp.Shared.Dto;
 @using Microsoft.AspNetCore.Components.Web
 @inject HttpClient Http;
+@inject NavigationManager NavigationManager;
 
 <PageTitle>Patient List</PageTitle>
 
@@ -33,7 +34,7 @@ else
                     <td>@patient.INR</td>
                     <td>
                         <button>Details</button>
-                        <button>Edit</button>
+                        <button @onclick="() => GoToEditFrom(patient.PatientId)">Edit</button>
                         <button @onclick="() => DeletePatient(patient.PatientId)">Delete</button>
                     </td>
                 </tr>
@@ -53,5 +54,9 @@ else
     {
         await Http.DeleteAsync($"https://localhost:5007/Patients/{patientId}");
         patients = await Http.GetFromJsonAsync<PatientResponseDto[]>("https://localhost:5007/Patients");
+    }
+    private void GoToEditFrom(int patientId)
+    {
+        NavigationManager.NavigateTo($"/editPatient/{patientId}");
     }
 }
