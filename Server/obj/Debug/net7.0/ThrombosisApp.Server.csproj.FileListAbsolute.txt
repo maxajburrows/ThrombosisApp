@@ -37,8 +37,6 @@ C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\server\obj\Debug\net7.0\Thrombosis
 C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\server\obj\Debug\net7.0\ThrombosisApp.Server.AssemblyInfo.cs
 C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\server\obj\Debug\net7.0\ThrombosisApp.Server.csproj.CoreCompileInputs.cache
 C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\server\obj\Debug\net7.0\ThrombosisApp.Server.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\server\obj\Debug\net7.0\ThrombosisApp.Server.RazorAssemblyInfo.cache
-C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\server\obj\Debug\net7.0\ThrombosisApp.Server.RazorAssemblyInfo.cs
 C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\server\obj\Debug\net7.0\staticwebassets\msbuild.ThrombosisApp.Server.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\server\obj\Debug\net7.0\staticwebassets\msbuild.build.ThrombosisApp.Server.props
 C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\server\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.ThrombosisApp.Server.props
