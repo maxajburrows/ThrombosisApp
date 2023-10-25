@@ -11,5 +11,4 @@ public class DoseDescription
     public int PatientId { get; set; }
     public int Day { get; set; }
     public float Dose { get; set; }
-    //public Patient? Patient { get; set; }
 }
