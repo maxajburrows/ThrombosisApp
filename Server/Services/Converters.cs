@@ -30,6 +30,7 @@ public class Converters
     public static List<DoseDescriptionDto> ToDoseDescriptionDto(List<DoseDescription> doses)
     {
         List<DoseDescriptionDto> dtos = new();
+        if (doses is null) return dtos;
         foreach (DoseDescription dose in doses)
         {
             DoseDescriptionDto dto = new() { Id = dose.Id, PatientId = dose.PatientId, Day = dose.Day, Dose = dose.Dose};

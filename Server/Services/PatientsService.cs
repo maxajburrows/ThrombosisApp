@@ -33,4 +33,9 @@ public class PatientsService
         }
         return doseDescription;
     }
+
+    public Patient? GetPatientById(int patientId)
+    {
+        return _patientRepository.GetPatientAndDosage(patientId);
+    }
 }

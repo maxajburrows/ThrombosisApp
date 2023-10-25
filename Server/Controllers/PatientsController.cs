@@ -19,24 +19,30 @@ public class PatientsController : ControllerBase
         _patientRepository = patientRepository;
         _patientsService = patientsService;
     }
-    // host/controllername
+
     [HttpGet]
-    [ProducesResponseType(200, Type = typeof(IEnumerable<Patient>))]
+    [ProducesResponseType(200, Type = typeof(IEnumerable<PatientResponseDto>))]
     public async Task<ActionResult<List<PatientResponseDto>>> GetAllPatients()
     {
         List<Patient> patientEntities = await _patientRepository.RetrieveAllAsync();
         return Ok(patientEntities.Select(Converters.ToPatientResponseDto));
     }
 
-    // host/controllername/routed
+    [HttpGet("{patientId}")]
+    [ProducesResponseType(200, Type = typeof(IEnumerable<PatientResponseDto>))]
+    public ActionResult<PatientResponseDto> GetDoseInfo(int patientId)
+    {
+        Patient? patient =  _patientsService.GetPatientById(patientId);
+        return Ok(Converters.ToPatientResponseDto(patient));
+    }
+
     [HttpDelete("{patientId}")]
     public async Task<ActionResult<bool?>> DeletePatient(int patientId)
     {
         await _patientRepository.DeleteAsync(patientId);
         return NoContent();
-        //Deal with failure
     }
-    // host/controllername/[id]
+
     [HttpPatch("{patientId}")]
     public async Task<ActionResult<Patient>> UpdatePatient(int patientId, [FromBody] EditPatientDto updatedPatient)
     {

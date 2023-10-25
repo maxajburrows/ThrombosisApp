@@ -11,4 +11,5 @@ public interface IPatientRepository
     Task<List<Patient>> RetrieveAllAsync();
     Task<bool> DeleteAsync(int patientId);
     Patient? FindPatient(int patientId);
+    Patient? GetPatientAndDosage(int patientId);
 }

@@ -22,19 +22,18 @@ else
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>INR</th>
-                <th>More Info</th>
+                <th>More</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var patient in patients)
             {
-                <tr>
+                <tr @onclick="() => GoToMoreDetails(patient.PatientId)">
                     <td>@patient.FirstName</td>
                     <td>@patient.LastName</td>
                     <td>@patient.INR</td>
                     <td>
-                        <button>Details</button>
-                        <button @onclick="() => GoToEditFrom(patient.PatientId)">Edit</button>
+                        <button @onclick="() => GoToEditForm(patient.PatientId)">Edit</button>
                         <button @onclick="() => DeletePatient(patient.PatientId)">Delete</button>
                     </td>
                 </tr>
@@ -44,7 +43,7 @@ else
 }
 
 @code {
-    private PatientResponseDto[]? patients;
+    public PatientResponseDto[]? patients;
 
     protected override async Task OnInitializedAsync()
     {
@@ -55,8 +54,12 @@ else
         await Http.DeleteAsync($"https://localhost:5007/Patients/{patientId}");
         patients = await Http.GetFromJsonAsync<PatientResponseDto[]>("https://localhost:5007/Patients");
     }
-    private void GoToEditFrom(int patientId)
+    private void GoToEditForm(int patientId)
     {
         NavigationManager.NavigateTo($"/editPatient/{patientId}");
+    }
+    private void GoToMoreDetails(int patientId)
+    {
+        NavigationManager.NavigateTo($"/details/{patientId}");
     }
 }
