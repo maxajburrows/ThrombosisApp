@@ -11,7 +11,7 @@ public class PatientsService
     {
         _patientRepository = patientRepository;
     }
-    public async Task<Patient?> UpdatePatient(EditPatientDto updatedPatient)
+    public async Task<PatientResponseDto?> UpdatePatient(EditPatientDto updatedPatient)
     {
         Patient? originalPatient = _patientRepository.FindPatient(updatedPatient.PatientId);
         if (originalPatient is null) return null;
@@ -20,20 +20,14 @@ public class PatientsService
         originalPatient.LastName = updatedPatient.LastName is null ? originalPatient.LastName : updatedPatient.LastName;
         originalPatient.INR = updatedPatient.INR == 0f ? originalPatient.INR : updatedPatient.INR;
 
-        return (await _patientRepository.UpdateAsync(originalPatient)).Item1;
+        return Converters.ToPatientResponseDto((await _patientRepository.UpdateAsync(originalPatient)).Item1);
     }
-    public static float[] CalculateDose(float INR)
+    public async Task<PatientResponseDto?> AddPatient(NewPatientDto newPatient)
     {
-        float[] doseDescription = new float[30];
-        float dose = Math.Max(2+(3-INR)*3, 0);
-        for (int i = 0; i < 30; i++)
-        {
-            doseDescription[i] = dose;
-            dose *= 0.95f;
-        }
-        return doseDescription;
+        Patient patientToAdd = Converters.NewPatientDtoToPatient(newPatient);
+        return Converters.ToPatientResponseDto((await _patientRepository.UpdateAsync(patientToAdd)).Item1);
     }
-
+    
     public Patient? GetPatientById(int patientId)
     {
         return _patientRepository.GetPatientAndDosage(patientId);

@@ -24,7 +24,7 @@ public class Converters
             FirstName = newPatient.FirstName,
             LastName = newPatient.LastName,
             INR = newPatient.INR,
-            //DoseDescription = PatientsService.CalculateDose(newPatient.INR)
+            DoseDescriptions = BuildDoseDescription(newPatient)
         };
     }
     public static List<DoseDescriptionDto> ToDoseDescriptionDto(List<DoseDescription> doses)
@@ -46,5 +46,20 @@ public class Converters
             Postion = doctor.Postion,
             Tenure = doctor.Tenure
         };
+    }
+    public static List<DoseDescription> BuildDoseDescription(NewPatientDto newPatient)
+    {
+        return Enumerable.Range(1, 30)
+                    .Select(i => new DoseDescription { 
+                            Id = 0,
+                            PatientId = 0,
+                            Day = i,
+                            Dose = CalculateDose(newPatient.INR, i) 
+                            }).ToList();
+    }
+    public static float CalculateDose(float INR, int day)
+    {
+        double dose = Math.Max(2+(3-INR)*3, 0)*Math.Pow(0.95, day);
+        return (float) Math.Round(dose, 2);
     }
 }

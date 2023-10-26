@@ -51,7 +51,7 @@ public class PatientsController : ControllerBase
     }
 
     [HttpPatch("{patientId}")]
-    public async Task<ActionResult<Patient>> UpdatePatient(int patientId, [FromBody] EditPatientDto updatedPatient)
+    public async Task<ActionResult<PatientResponseDto>> UpdatePatient(int patientId, [FromBody] EditPatientDto updatedPatient)
     {
         return Ok(await _patientsService.UpdatePatient(updatedPatient));
     }
@@ -59,6 +59,6 @@ public class PatientsController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<PatientResponseDto?>> AddPatient([FromBody] NewPatientDto newPatient)
     {
-        return Created("You can't access this resource yet", Converters.ToPatientResponseDto((await _patientRepository.CreateAsync(newPatient)).Item1));
+        return Created("You can't access this resource yet", await _patientsService.AddPatient(newPatient));
     }
 }

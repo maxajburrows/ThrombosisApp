@@ -18,13 +18,12 @@ public class PatientRepository : IPatientRepository
 
     public async Task<List<Patient>> RetrieveAllAsync()
     {   
-        //return await _context.Patients.Include(p => p.DoseDescriptions).ToListAsync();
         return await _context.Patients.ToListAsync();
 
     }
-    public async Task<(Patient?, bool)> CreateAsync(NewPatientDto newPatient)
+    public async Task<(Patient?, bool)> CreateAsync(Patient newPatient)
     {
-        EntityEntry<Patient> added = await _context.Patients.AddAsync(Converters.NewPatientDtoToPatient(newPatient));
+        EntityEntry<Patient> added = await _context.Patients.AddAsync(newPatient);
         int affected = await _context.SaveChangesAsync();
         return (added.Entity, affected == 1);
     }
