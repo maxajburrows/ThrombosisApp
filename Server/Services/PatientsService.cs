@@ -13,19 +13,26 @@ public class PatientsService
     }
     public async Task<PatientResponseDto?> UpdatePatient(EditPatientDto updatedPatient)
     {
-        Patient? originalPatient = _patientRepository.FindPatient(updatedPatient.PatientId);
+        Patient? originalPatient = _patientRepository.GetPatientAndDosage(updatedPatient.PatientId);
         if (originalPatient is null) return null;
 
         originalPatient.FirstName = updatedPatient.FirstName is null ? originalPatient.FirstName : updatedPatient.FirstName;
         originalPatient.LastName = updatedPatient.LastName is null ? originalPatient.LastName : updatedPatient.LastName;
-        originalPatient.INR = updatedPatient.INR == 0f ? originalPatient.INR : updatedPatient.INR;
-
+        //originalPatient.INR = updatedPatient.INR == 0f ? originalPatient.INR : updatedPatient.INR;
+        if (updatedPatient.INR != 0f)
+        {
+            originalPatient.INR = updatedPatient.INR;
+            for (int i = 0; i < 30; i++)
+            {
+                originalPatient.DoseDescriptions[i].Dose = Converters.CalculateDose(updatedPatient.INR, i);
+            }
+        }
         return Converters.ToPatientResponseDto((await _patientRepository.UpdateAsync(originalPatient)).Item1);
     }
     public async Task<PatientResponseDto?> AddPatient(NewPatientDto newPatient)
     {
         Patient patientToAdd = Converters.NewPatientDtoToPatient(newPatient);
-        return Converters.ToPatientResponseDto((await _patientRepository.UpdateAsync(patientToAdd)).Item1);
+        return Converters.ToPatientResponseDto((await _patientRepository.CreateAsync(patientToAdd)).Item1);
     }
     
     public Patient? GetPatientById(int patientId)

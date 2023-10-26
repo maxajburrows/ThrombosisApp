@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ThrombosisApp.Server.Models;
 using ThrombosisApp.Server.Data;
-using ThrombosisApp.Server.Services;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using ThrombosisApp.Shared.Dto;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
