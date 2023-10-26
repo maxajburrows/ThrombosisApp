@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8E/LDF7MS4Hq3Ql5HlG6S5ekxNCSRSsrpj61gDm/zWk=",
+  "Hash": "qN4pTa6iZ5xjCM23z7m9wMjv1GWcQpjd8N5Xcx1Lf1g=",
   "Source": "ThrombosisApp.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -7342,6 +7342,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manifest.json"
+    },
+    {
+      "Identity": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\medBackground.jpeg",
+      "SourceId": "ThrombosisApp.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "medBackground.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\medBackground.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\Untitled.jpeg",
+      "SourceId": "ThrombosisApp.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "Untitled.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Untitled.jpeg"
     }
   ]
 }

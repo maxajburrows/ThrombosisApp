@@ -1,6 +1,4 @@
-using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
-using ThrombosisApp.Server.Models;
 using ThrombosisApp.Server.Data;
 using ThrombosisApp.Server.Repositories;
 using ThrombosisApp.Server.Services;
@@ -12,7 +10,7 @@ string datbasePath = Path.Combine(Environment.CurrentDirectory, "PatientDB.db");
 builder.Services.AddDbContext<PatientDB>(options =>
     options.UseSqlite($"Data Source={datbasePath}"));
     
-builder.Services.AddScoped<IPatientRepository, PatientRepository>(); //AddSingleton
+builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<PatientsService>();
 
 builder.Services.AddCors(options =>

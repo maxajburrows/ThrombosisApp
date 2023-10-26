@@ -50,7 +50,6 @@ else
     private async Task DeletePatient(int patientId)
     {
         await Http.DeleteAsync($"https://localhost:5007/Patients/{patientId}");
-        //delete it without calling the server again?
         patients = await Http.GetFromJsonAsync<PatientResponseDto[]>("https://localhost:5007/Patients");
     }
     private void GoToEditForm(int patientId)

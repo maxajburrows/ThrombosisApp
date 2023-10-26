@@ -2,7 +2,15 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: whitesmoke;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-image: url('../bgImage.jpeg');
+    height: fit-content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
 }
 
 .table {
@@ -16,6 +24,11 @@ html, body {
 .btn-custom {
     margin: 5px;
     /* max-width: 200px; */
+}
+
+.inr {
+    color: red;
+    margin-bottom: 20px;
 }
 
 h1 {

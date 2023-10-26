@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\service-worker.js"
     },
     {
+      "Id": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\Untitled.jpeg",
+      "PackagePath": "staticwebassets\\Untitled.jpeg"
+    },
+    {
       "Id": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
@@ -91,6 +95,10 @@
     {
       "Id": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\manifest.json",
       "PackagePath": "staticwebassets\\manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\medBackground.jpeg",
+      "PackagePath": "staticwebassets\\medBackground.jpeg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ThrombosisApp.Client.Microsoft.AspNetCore.StaticWebAssets.props",

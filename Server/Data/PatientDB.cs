@@ -5,7 +5,7 @@ using ThrombosisApp.Server.Services;
 
 namespace ThrombosisApp.Server.Data;
 
-public class PatientDB : DbContext //Db
+public class PatientDB : DbContext
 {
     public PatientDB(DbContextOptions<PatientDB> options) : base(options)
     {
@@ -51,7 +51,7 @@ public class PatientDB : DbContext //Db
                             Id = i,
                             PatientId = 1,
                             Day = i,
-                            Dose = (float)(Math.Max(2+(3-2.1F)*3, 0)*Math.Pow(0.95, i)) 
+                            Dose = (float) Math.Round(Math.Max(2+(3-2.1F)*3, 0)*Math.Pow(0.95, i), 2)
                             })
             );
             modelBuilder.Entity<DoseDescription>()
@@ -61,7 +61,7 @@ public class PatientDB : DbContext //Db
                             Id = i+30,
                             PatientId = 2,
                             Day = i,
-                            Dose = (float)(Math.Max(2+(3-1.6F)*3, 0)*Math.Pow(0.95, i)) 
+                            Dose = (float) Math.Round(Math.Max(2+(3-1.6F)*3, 0)*Math.Pow(0.95, i), 2) 
                             })
             );
             modelBuilder.Entity<DoseDescription>()
@@ -71,7 +71,7 @@ public class PatientDB : DbContext //Db
                             Id = i+60,
                             PatientId = 3,
                             Day = i,
-                            Dose = (float)(Math.Max(2+(3-0.7F)*3, 0)*Math.Pow(0.95, i)) 
+                            Dose = (float) Math.Round(Math.Max(2+(3-0.7F)*3, 0)*Math.Pow(0.95, i), 2) 
                             })
             );
             modelBuilder.Entity<DoseDescription>()
@@ -81,7 +81,7 @@ public class PatientDB : DbContext //Db
                             Id = i+90,
                             PatientId = 4,
                             Day = i,
-                            Dose = (float)(Math.Max(2+(3-2.9F)*3, 0)*Math.Pow(0.95, i)) 
+                            Dose = (float) Math.Round(Math.Max(2+(3-2.9F)*3, 0)*Math.Pow(0.95, i), 2) 
                             })
             );
             modelBuilder.Entity<DoseDescription>()
@@ -91,7 +91,7 @@ public class PatientDB : DbContext //Db
                             Id = i+120,
                             PatientId = 5,
                             Day = i,
-                            Dose = (float)(Math.Max(2+(3-1.2F)*3, 0)*Math.Pow(0.95, i)) 
+                            Dose = (float) Math.Round(Math.Max(2+(3-1.2F)*3, 0)*Math.Pow(0.95, i), 2) 
                             })
             );
             modelBuilder.Entity<DoseDescription>()
@@ -101,7 +101,7 @@ public class PatientDB : DbContext //Db
                             Id = i+150,
                             PatientId = 6,
                             Day = i,
-                            Dose = (float)(Math.Max(2+(3-0.5F)*3, 0)*Math.Pow(0.95, i)) 
+                            Dose = (float) Math.Round(Math.Max(2+(3-0.5F)*3, 0)*Math.Pow(0.95, i), 2) 
                             })
             );
             modelBuilder.Entity<DoseDescription>()
@@ -111,7 +111,7 @@ public class PatientDB : DbContext //Db
                             Id = i+180,
                             PatientId = 7,
                             Day = i,
-                            Dose = (float)(Math.Max(2+(3-2.4F)*3, 0)*Math.Pow(0.95, i)) 
+                            Dose = (float) Math.Round(Math.Max(2+(3-2.4F)*3, 0)*Math.Pow(0.95, i), 2) 
                             })
             );
         
