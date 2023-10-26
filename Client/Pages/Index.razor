@@ -13,6 +13,28 @@
 </p>
 <h3>Our Team</h3>
 
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Postion</th>
+            <th>Tenure</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var doctor in doctors)
+        {
+            <tr>
+                <td>@doctor.FullName</td>
+                <td>@doctor.Postion</td>
+                <td>@doctor.Tenure</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
 
 @code {
     public DoctorResponseDto[]? doctors;
