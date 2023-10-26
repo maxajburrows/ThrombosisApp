@@ -11,6 +11,11 @@ public class PatientsService
     {
         _patientRepository = patientRepository;
     }
+    public async Task<List<PatientResponseDto>> GetAllPatients()
+    {
+        List<Patient> patientEntities = await _patientRepository.RetrieveAllAsync();
+        return patientEntities.Select(Converters.ToPatientResponseDto).ToList();
+    }
     public async Task<PatientResponseDto?> UpdatePatient(EditPatientDto updatedPatient)
     {
         Patient? originalPatient = _patientRepository.GetPatientAndDosage(updatedPatient.PatientId);

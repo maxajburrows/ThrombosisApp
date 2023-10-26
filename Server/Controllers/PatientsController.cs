@@ -11,12 +11,10 @@ namespace ThrombosisApp.Server.Controllers;
 [Route("[controller]")]
 public class PatientsController : ControllerBase
 {
-    private readonly IPatientRepository _patientRepository;
     private readonly PatientsService _patientsService;
 
-    public PatientsController(IPatientRepository patientRepository, PatientsService patientsService)
+    public PatientsController(PatientsService patientsService)
     {
-        _patientRepository = patientRepository;
         _patientsService = patientsService;
     }
 
@@ -24,8 +22,7 @@ public class PatientsController : ControllerBase
     [ProducesResponseType(200, Type = typeof(IEnumerable<PatientResponseDto>))]
     public async Task<ActionResult<List<PatientResponseDto>>> GetAllPatients()
     {
-        List<Patient> patientEntities = await _patientRepository.RetrieveAllAsync();
-        return Ok(patientEntities.Select(Converters.ToPatientResponseDto));
+        return Ok(await _patientsService.GetAllPatients());
     }
 
     [HttpGet("Doctors")]
