@@ -50,14 +50,8 @@ optionsBuilder.UseSqlite();
 
 using (PatientDB p = new PatientDB(optionsBuilder.Options))
 {
-    bool deleted = await p.Database.EnsureDeletedAsync();
-    bool created = await p.Database.EnsureCreatedAsync();
-
-    foreach (Patient pat in p.Patients)
-    {
-        Console.WriteLine("{0} {1} has INR value of: {2}",
-            pat.FirstName, pat.LastName, pat.INR);
-    }
+    await p.Database.EnsureDeletedAsync();
+    await p.Database.EnsureCreatedAsync();
 }
 
 app.Run();

@@ -15,16 +15,12 @@ public class PatientDB : DbContext //Db
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        Console.WriteLine("In model configuring method");
         string path = Path.Combine(Environment.CurrentDirectory, "PatientDB.db");
         string connection = $"Filename={path}";
-        Console.WriteLine($"Connection: {connection}");
         optionsBuilder.UseSqlite(connection);
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        Console.WriteLine("In model creating method.");
-
         modelBuilder.Entity<Patient>()
             .HasMany(p => p.DoseDescriptions)
             .WithOne()

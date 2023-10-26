@@ -877,11 +877,11 @@
       "url": "_framework\/ThrombosisApp.Shared.pdb"
     },
     {
-      "hash": "sha256-1uzcyZT1oxV9whYqRKhrMdKeDsg7wVNyrxXlz1+EVMI=",
+      "hash": "sha256-uUkiPFI2sjJpcIWmrmI3bs6Uitg7ki2YJJlIs7+j3ws=",
       "url": "_framework\/ThrombosisApp.Client.dll"
     },
     {
-      "hash": "sha256-fgILDEw3nZNcthFkCXy8TQYHlNhuh0PryxelLBjg54E=",
+      "hash": "sha256-7wzgmfLxLNM23qfTfxyE76Qc4SGyETKdmHZWdty5vuE=",
       "url": "_framework\/ThrombosisApp.Client.pdb"
     },
     {
@@ -889,9 +889,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-KknYegmdIpmyQRJvMzciZ+JgmqO\/RSxJeBrZZA6v12c=",
+      "hash": "sha256-1NkRqxGs9VPAGm8XXA\/uHRTr9EgavSxZI7Q9vxkJ4Ys=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "+mo7qTzR"
+  "version": "uqYH04an"
 };
