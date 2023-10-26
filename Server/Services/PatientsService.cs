@@ -33,6 +33,11 @@ public class PatientsService
         return _patientRepository.GetPatientAndDosage(patientId);
     }
 
+    public async Task<bool?> DeletePatient(int patientId)
+    {
+        return await _patientRepository.DeleteAsync(patientId);
+    }
+
     public async Task<List<DoctorResponseDto>> GetAllDoctors()
     {
         List<Doctor> doctors = await _patientRepository.GetDoctorsAsync();

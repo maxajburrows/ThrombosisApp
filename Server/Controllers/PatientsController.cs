@@ -46,7 +46,7 @@ public class PatientsController : ControllerBase
     [HttpDelete("{patientId}")]
     public async Task<ActionResult<bool?>> DeletePatient(int patientId)
     {
-        await _patientRepository.DeleteAsync(patientId);
+        await _patientsService.DeletePatient(patientId);
         return NoContent();
     }
 
