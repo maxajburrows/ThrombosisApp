@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-uhotZszkBLq\/V8xt8UtpU6lGHEIqbqLsFUVGyelV2TU=",
+      "hash": "sha256-4KKnniAGLHmaLvzaTKj2YGFt2nGQyM3rZ8S9Uspn0nk=",
       "url": "css\/app.css"
     },
     {
@@ -49,6 +49,10 @@
       "url": "css\/open-iconic\/README.md"
     },
     {
+      "hash": "sha256-1yMTC5451i10M5z5UIliqFpQkFj2i+zdH2EjIZTwqOU=",
+      "url": "css\/tailwind\/tailwind.css"
+    },
+    {
       "hash": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "url": "favicon.png"
     },
@@ -61,7 +65,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-n989jVxlgbMqTiggUAKzKNYhBeBKygn4k3aCuDMgueY=",
+      "hash": "sha256-t5uwkCCEOar4O3lO4M8PRHGpaUKKU4FOchurh10hFmE=",
       "url": "index.html"
     },
     {
@@ -69,7 +73,7 @@
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-XAuPXXJH06cHL9BiztIhcCxhelSjk4arhctci87s\/UU=",
+      "hash": "sha256-bMrH8R+kY82Jj6LbtCBXzftIPAKlgrEnrUDZrADRqEk=",
       "url": "ThrombosisApp.Client.styles.css"
     },
     {
@@ -865,19 +869,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-xZ7o4YR3yJGM6aN56JuZRR8yHl56r0t\/ibtR8ZcmD2A=",
+      "hash": "sha256-cK3IFkvhIeFcoamI5AZ4fuTRVwLxV2rSw8DXCVQOy74=",
       "url": "_framework\/ThrombosisApp.Shared.dll"
     },
     {
-      "hash": "sha256-s14L3WowdoA7YaT3ZamR1lgCeCZaeHi6Me1ERaODMZ0=",
+      "hash": "sha256-ONI4aie4Z1PsYEA8+2zJXou+w6OOMrpL88elShIFeqU=",
       "url": "_framework\/ThrombosisApp.Shared.pdb"
     },
     {
-      "hash": "sha256-N3nsfSJ\/qMaJXdo2PYjBQdXj\/XUrIm75rsFi9CcDipQ=",
+      "hash": "sha256-f+QNqfTc37lp58R71OYu3hkKxLjyN+evfgZg+7rbDNI=",
       "url": "_framework\/ThrombosisApp.Client.dll"
     },
     {
-      "hash": "sha256-WtxHdgD0Ys\/oVSgknBTwivJ9a3SxSBzrDV26XBe4Gwk=",
+      "hash": "sha256-lDHo88OxH\/MA3mjmczKxxP6YzGLB6wiMu1xmox7W0N0=",
       "url": "_framework\/ThrombosisApp.Client.pdb"
     },
     {
@@ -885,9 +889,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-AMTSQlrGtI\/vidcz8uLXN2jLGs7NYaWrJXL396ZShdg=",
+      "hash": "sha256-MDztTaSQTVk0qaPe2Qg7A7eZjtxg6G5sIjWo7zd91lc=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "x+vqIQwe"
+  "version": "h1gIf3re"
 };

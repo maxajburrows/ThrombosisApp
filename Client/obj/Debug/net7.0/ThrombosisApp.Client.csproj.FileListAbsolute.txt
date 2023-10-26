@@ -838,3 +838,5 @@ C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Client\obj\Debug\net7.0\Thrombosis
 C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Client\obj\Debug\net7.0\refint\ThrombosisApp.Client.dll
 C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Client\obj\Debug\net7.0\ThrombosisApp.Client.pdb
 C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Client\obj\Debug\net7.0\ref\ThrombosisApp.Client.dll
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Client\bin\Debug\net7.0\package-lock.json
+C:\Users\maxaj\OneDrive\Desktop\ThrombosisApp\Client\bin\Debug\net7.0\package.json

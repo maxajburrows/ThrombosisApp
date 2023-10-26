@@ -38,4 +38,13 @@ public class Converters
         }
         return dtos;
     }
+    public static DoctorResponseDto ToDoctorResponseDto(Doctor doctor)
+    {
+        return new() {
+            DoctorId = doctor.DoctorId,
+            FullName = doctor.FullName,
+            Postion = doctor.Postion,
+            Tenure = doctor.Tenure
+        };
+    }
 }

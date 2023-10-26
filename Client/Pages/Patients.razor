@@ -8,8 +8,6 @@
 
 <h1>Patient List</h1>
 
-<p>These are our lovely patients</p>
-
 @if (patients == null)
 {
     <p><em>Loading...</em></p>
@@ -33,8 +31,8 @@ else
                     <td @onclick="() => GoToMoreDetails(patient.PatientId)">@patient.LastName</td>
                     <td>@patient.INR</td>
                     <td>
-                        <button @onclick="() => GoToEditForm(patient.PatientId)">Edit</button>
-                        <button @onclick="() => DeletePatient(patient.PatientId)">Delete</button>
+                        <button @onclick="() => GoToEditForm(patient.PatientId)" class="btn btn-outline-primary">Edit</button>
+                        <button @onclick="() => DeletePatient(patient.PatientId)" class="btn btn-outline-primary">Delete</button>
                     </td>
                 </tr>
             }

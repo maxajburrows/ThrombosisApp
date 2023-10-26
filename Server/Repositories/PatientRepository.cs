@@ -58,4 +58,9 @@ public class PatientRepository : IPatientRepository
             .Include(p => p.DoseDescriptions)
             .FirstOrDefault(p => p.PatientId == patientId);
     }
+
+    public Task<List<Doctor>> GetDoctorsAsync()
+    {
+        return _context.Doctors.ToListAsync();
+    }
 }

@@ -28,6 +28,13 @@ public class PatientsController : ControllerBase
         return Ok(patientEntities.Select(Converters.ToPatientResponseDto));
     }
 
+    [HttpGet("Doctors")]
+    [ProducesResponseType(200, Type = typeof(IEnumerable<PatientResponseDto>))]
+    public async Task<ActionResult<List<DoctorResponseDto>>> GetAllDoctors()
+    {
+        return Ok(await _patientsService.GetAllDoctors());
+    }
+
     [HttpGet("{patientId}")]
     [ProducesResponseType(200, Type = typeof(IEnumerable<PatientResponseDto>))]
     public ActionResult<PatientResponseDto> GetDoseInfo(int patientId)

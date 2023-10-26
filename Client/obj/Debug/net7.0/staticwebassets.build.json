@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WweB5p9+mqLIPlk53EBg9HhL2r2CSXOh+WaGiEuvFe0=",
+  "Hash": "8E/LDF7MS4Hq3Ql5HlG6S5ekxNCSRSsrpj61gDm/zWk=",
   "Source": "ThrombosisApp.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -7240,6 +7240,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
+    },
+    {
+      "Identity": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\css\\tailwind\\tailwind.css",
+      "SourceId": "ThrombosisApp.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/tailwind/tailwind.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\tailwind\\tailwind.css"
     },
     {
       "Identity": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\favicon.png",

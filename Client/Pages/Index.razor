@@ -1,17 +1,25 @@
 ﻿@page "/"
 @inject HttpClient Http
-
+@using ThrombosisApp.Shared.Dto;
 
 
 <PageTitle>Index</PageTitle>
 
-<h1>BN IT</h1>
-
+<h1>The National Thrombosis Service</h1>
 <h3>About Us</h3>
+<p>Are you taking blood thinners (acenocoumarol or phenprocoumon) to prevent thrombosis? 
+    And do you have to go to the blood test regularly to check the clotting of your blood - the INR value? Or wait for the nurse?
+    Then there is a safe, smarter alternative: Thrombosis Self-care from the NTD.
+</p>
+<h3>Our Team</h3>
 
-<p>We are a very nice company that helps lots of people.</p>
 
 @code {
-    
+    public DoctorResponseDto[]? doctors;
+
+    protected override async Task OnInitializedAsync()
+    {
+        doctors = await Http.GetFromJsonAsync<DoctorResponseDto[]>("https://localhost:5007/Patients/Doctors");
+    }
 }
 

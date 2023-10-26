@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
+      "Id": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\css\\tailwind\\tailwind.css",
+      "PackagePath": "staticwebassets\\css\\tailwind\\tailwind.css"
+    },
+    {
       "Id": "C:\\Users\\maxaj\\OneDrive\\Desktop\\ThrombosisApp\\Client\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },

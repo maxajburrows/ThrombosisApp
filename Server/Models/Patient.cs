@@ -17,5 +17,4 @@ public class Patient
      [Required]
     public float INR { get; set; }
     public List<DoseDescription>? DoseDescriptions { get; set; }
-    
 }
