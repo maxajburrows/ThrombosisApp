@@ -26,13 +26,13 @@ else
         <tbody>
             @foreach (var patient in patients)
             {
-                <tr>
-                    <td @onclick="() => GoToMoreDetails(patient.PatientId)">@patient.FirstName</td>
+                <tr class="table-wrapper">
+                    <td class="table-text" @onclick="() => GoToMoreDetails(patient.PatientId)">@patient.FirstName</td>
                     <td @onclick="() => GoToMoreDetails(patient.PatientId)">@patient.LastName</td>
                     <td>@patient.INR</td>
-                    <td>
-                        <button @onclick="() => GoToEditForm(patient.PatientId)" class="btn btn-outline-primary">Edit</button>
-                        <button @onclick="() => DeletePatient(patient.PatientId)" class="btn btn-outline-primary">Delete</button>
+                    <td class="btn-wrapper">
+                        <button @onclick="() => GoToEditForm(patient.PatientId)" class="btn btn-outline-primary btn-custom">Edit</button>
+                        <button @onclick="() => DeletePatient(patient.PatientId)" class="btn btn-outline-primary btn-custom">Delete</button>
                     </td>
                 </tr>
             }

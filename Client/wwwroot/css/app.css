@@ -13,6 +13,11 @@ html, body {
     max-width: 1000px;
 }
 
+.btn-custom {
+    margin: 5px;
+    /* max-width: 200px; */
+}
+
 h1 {
     padding-bottom: 20px;
 }

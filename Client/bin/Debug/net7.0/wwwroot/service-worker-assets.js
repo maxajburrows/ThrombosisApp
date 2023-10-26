@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-4KKnniAGLHmaLvzaTKj2YGFt2nGQyM3rZ8S9Uspn0nk=",
+      "hash": "sha256-7VbQJKLlj11STENvyAk4JEr6kts\/fckJlvugUOv0FmM=",
       "url": "css\/app.css"
     },
     {
@@ -65,7 +65,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-t5uwkCCEOar4O3lO4M8PRHGpaUKKU4FOchurh10hFmE=",
+      "hash": "sha256-1AW6EJxOyCqlvLgxaozNNL8AWEJRyxhdVtfA7sGAXSY=",
       "url": "index.html"
     },
     {
@@ -877,11 +877,11 @@
       "url": "_framework\/ThrombosisApp.Shared.pdb"
     },
     {
-      "hash": "sha256-FH+KmD2XFu\/V6p5IA19O6zuGbNSOhvYioQM1S36ShHg=",
+      "hash": "sha256-1uzcyZT1oxV9whYqRKhrMdKeDsg7wVNyrxXlz1+EVMI=",
       "url": "_framework\/ThrombosisApp.Client.dll"
     },
     {
-      "hash": "sha256-B9IA9kEoVa4YxybkpcsW6PA2KzifsBPIVZ9DDEBpWlw=",
+      "hash": "sha256-fgILDEw3nZNcthFkCXy8TQYHlNhuh0PryxelLBjg54E=",
       "url": "_framework\/ThrombosisApp.Client.pdb"
     },
     {
@@ -889,9 +889,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-2Cky2DL8r14c+GL\/qn7NWbcB41KDF0WeqdgF\/UY0vqc=",
+      "hash": "sha256-KknYegmdIpmyQRJvMzciZ+JgmqO\/RSxJeBrZZA6v12c=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "eWcAXIR5"
+  "version": "+mo7qTzR"
 };

@@ -5,9 +5,9 @@
 
 <PageTitle>Add a Patient</PageTitle>
 
-<h1>Add a Patient</h1>
+<h1>Edit patient with Id: @PatientId</h1>
 
-<p>Add a patient with the form below</p>
+<p>Edit the patient with the form below</p>
 
 <EditForm Model="@editPatient" OnValidSubmit="@SumbitPatientEdits">
 <DataAnnotationsValidator/>
@@ -15,18 +15,18 @@
 
 <p>
     <label for="firstName">First Name</label>
-    <InputText id="firstName" @bind-Value="editPatient.FirstName" />
+    <InputText id="firstName" @bind-Value="editPatient.FirstName" class="form-control form-extra" />
 </p>
 <p>
     <label for="lastName">Last Name</label>
-    <InputText id="lastName" @bind-Value="editPatient.LastName" />
+    <InputText id="lastName" @bind-Value="editPatient.LastName" class="form-control form-extra" />
 </p>
 <p>
     <label for="inr">INR</label>
-    <InputNumber id="inr" @bind-Value="editPatient.INR" />
+    <InputNumber id="inr" @bind-Value="editPatient.INR" class="form-control form-extra" />
 </p>
 
-<button type="submit">Submit</button>
+<button type="submit" class="btn btn-outline-primary">Submit</button>
 
 </EditForm>
 
