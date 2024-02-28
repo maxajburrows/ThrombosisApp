@@ -10,4 +10,6 @@ One you have run the Client and Server navigate to "http://localhost:5105" in yo
 
 Screen recording of the app in action:
 
+Uploading Thrombosis App Recording.mp4…
+
 
