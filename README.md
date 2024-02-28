@@ -11,9 +11,3 @@ One you have run the Client and Server navigate to "http://localhost:5105" in yo
 Screen recording of the app in action:
 
 https://github.com/maxajburrows/ThrombosisApp/assets/109215585/48fc31d9-4648-476a-94bc-141477f05d1e
-
-
-
-Uploading Thrombosis App Recording.mp4…
-
-
